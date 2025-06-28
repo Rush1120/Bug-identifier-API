@@ -1,8 +1,8 @@
-# AI-Powered Bug Identifier 🐛
+# AI-Powered Bug Identifier 
 
 An intelligent API that analyzes code snippets to identify potential bugs using Google's Gemini AI. Perfect for code reviews, learning, and catching common programming mistakes.
 
-## Features ✨
+## Features 
 
 - **Smart Bug Detection**: Identifies logic, runtime, off-by-one, edge-case, and syntax errors
 - **Multi-language Support**: Python, JavaScript, Java, C, C++, C#, Go, Rust, PHP, Ruby
@@ -12,7 +12,7 @@ An intelligent API that analyzes code snippets to identify potential bugs using 
 - **Sample Cases**: Pre-built examples for testing and learning
 - **Comprehensive Testing**: Unit tests with mocked AI responses
 
-## Quick Start 🚀
+## Quick Start 
 
 ### 1. Setup Environment
 
@@ -83,7 +83,7 @@ API information and available endpoints.
 
 Health check endpoint.
 
-## Test Cases Included 🧪
+## Test Cases Included 
 
 The API includes these classic bug examples:
 
@@ -93,7 +93,7 @@ The API includes these classic bug examples:
 4. **Syntax Error**: `if x = 5: print('x is 5')`
 5. **Edge Case**: `if not arr: process(arr)`
 
-## Running Tests 🧪
+## Running Tests 
 
 ```bash
 # Run all tests
@@ -106,7 +106,7 @@ pytest -v
 pytest tests/test_main.py
 ```
 
-## Project Structure 📁
+## Project Structure 
 
 ```
 ai-bug-finder/
@@ -126,19 +126,19 @@ ai-bug-finder/
     └── test_main.py          # Unit tests
 ```
 
-## API Documentation 📚
+## API Documentation 
 
 Once the server is running, visit:
 - **Interactive Docs**: `http://localhost:8000/docs`
 - **ReDoc**: `http://localhost:8000/redoc`
 
-## Usage Examples 💡
+## Usage Examples 
 
 ### Python Example
 ```python
 import requests
 
-# Analyze Python code
+
 response = requests.post("http://localhost:8000/find-bug", json={
     "language": "python",
     "code": "def divide(a, b): return a / b"
@@ -149,7 +149,7 @@ print(response.json())
 
 ### JavaScript Example
 ```javascript
-// Analyze JavaScript code
+
 const response = await fetch("http://localhost:8000/find-bug", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -173,7 +173,7 @@ curl -X POST "http://localhost:8000/find-bug" \
      }'
 ```
 
-## Error Handling 🛡️
+## Error Handling 
 
 The API gracefully handles:
 - **Invalid languages**: Returns 422 with supported languages list
@@ -182,42 +182,12 @@ The API gracefully handles:
 - **AI model errors**: Returns 500 with error details
 - **Rate limiting**: Returns 429 when limit exceeded
 
-## Deployment 🚀
+## Deployment 
 
 ### Vercel
 1. Install Vercel CLI: `npm i -g vercel`
 2. Deploy: `vercel`
 
-### Railway
-1. Connect your GitHub repository
-2. Add environment variables
-3. Deploy automatically
 
-### Render
-1. Create a new Web Service
-2. Connect your repository
-3. Set build command: `pip install -r requirements.txt`
-4. Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 
-## Contributing 🤝
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## License 📄
-
-MIT License - feel free to use this project for learning and development!
-
-## Support 💬
-
-If you encounter any issues or have questions:
-1. Check the API documentation at `/docs`
-2. Review the test cases for examples
-3. Open an issue on GitHub
-
----
-
-**Happy Bug Hunting! 🐛🔍** 
