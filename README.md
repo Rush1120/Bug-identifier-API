@@ -45,7 +45,7 @@ uvicorn main:app --reload
 
 The API will be available at `http://localhost:8000`
 
-## API Endpoints 📡
+## API Endpoints 
 
 ### POST /find-bug
 
